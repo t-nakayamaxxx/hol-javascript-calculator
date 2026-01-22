@@ -1,4 +1,4 @@
-import { add, subtract, multiply, divide } from '../app';
+import { add, subtract, multiply, divide, square } from '../app';
 
 describe('Calculator Functions', () => {
     test('add function adds two numbers', () => {
@@ -27,5 +27,11 @@ describe('Calculator Functions', () => {
 
     test('divide function handles division by zero', () => {
         expect(() => divide(1, 0)).toThrow("Division by zero");
+    });
+
+    test('square function squares a number', () => {
+        expect(square(2)).toBe(4);
+        expect(square(-3)).toBe(9);
+        expect(square(0)).toBe(0);
     });
 });
